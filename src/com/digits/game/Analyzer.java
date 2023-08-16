@@ -20,8 +20,9 @@ public class Analyzer {
             int number = i;
             int index = 0;
             int[] digits = new int[LENGTH];
+            int length = LENGTH;
             while (number > 0) {
-                digits[index++] = number % 10;
+                digits[--length] = number % 10;
                 number /= 10;
             }
             Combination combination = new Combination(digits);
@@ -29,6 +30,9 @@ public class Analyzer {
                 combinations.add(combination);
             }
         }
+
+//        System.out.println("Combinations count: " + combinations.size());
+//        System.out.println("Combinations: " + combinations);
     }
 
     public Solution evaluate(Combination combination, int present, int correct) {
