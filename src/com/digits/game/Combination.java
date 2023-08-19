@@ -19,6 +19,10 @@ public class Combination {
         this.data = Arrays.copyOf(array, LENGTH);
     }
 
+    public int[] getData() {
+        return data;
+    }
+
     public boolean isValid() {
         if (data.length < LENGTH) {
             return false;
